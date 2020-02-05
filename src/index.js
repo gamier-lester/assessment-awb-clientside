@@ -159,6 +159,8 @@ function ListItem(props) {
     value = `${data.player1.name} with a score of ${data.score}`;
   } else if (data.player1.moves < data.player2.moves && data.score !== 0) {
     value = `${data.player2.name} with a score of ${data.score}`;
+  } else if (data.player1.moves === data.player2.moves && data.score !== 0) {
+    value = `${data.player2.name} with a score of ${data.score}`;
   } else if (data.score === 0) {
     value = `${data.player1.name} and ${data.player2.name} for 0 points (draw)`;
   }
