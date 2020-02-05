@@ -51,8 +51,7 @@ function Container(props) {
     const maxScore = 10;
     const winner = updatedPlayers.player1.moves > updatedPlayers.player2.moves ? updatedPlayers.player1.moves : updatedPlayers.player2.moves;
     updatedPlayers.score = maxScore - winner === 0 ? 1 : maxScore - winner;
-    // fetch('http://localhost:3002/assessment/add' , {
-    fetch('http://192.168.43.108:3002/assessment/fetchAll' , {
+    fetch('http://localhost:3002/assessment/add' , {
       method: "POST",
       headers: {
         'Content-type': 'application/json'
@@ -172,8 +171,7 @@ class ScoreBoard extends React.Component {
     scores: []
   }
   componentDidMount() {
-    // fetch('http://localhost:3002/assessment/fetchAll' , {
-    fetch('http://192.168.43.108:3002/assessment/fetchAll' , {
+    fetch('http://localhost:3002/assessment/fetchAll' , {
       method: "GET",
       headers: {
         'Content-type': 'application/json'
